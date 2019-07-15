@@ -36,6 +36,14 @@ class YotpoDataProvider
     /**
      * @return boolean
      */
+    public function isProductPageRatingsWidgetEnabled()
+    {
+        return (bool)$this->getConfigValue(Configuration::PDP_RATINGS_WIDGET_ENABLED, false);
+    }
+
+    /**
+     * @return boolean
+     */
     public function isConversionTrackingEnabled()
     {
         return (bool)$this->getConfigValue(Configuration::CONVERSION_TRACKING_ENABLED, false);

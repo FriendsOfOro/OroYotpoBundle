@@ -11,3 +11,12 @@ layout:
                 product: '=data["product"]'
                 visible: '=data["hack_oro_yotpo"].isReviewWidgetEnabled()'
                 app_key: '=data["hack_oro_yotpo"].getAppKey()'
+    - '@add':
+          id: yotpo_ratings
+          parentId: product_view_primary_container
+          siblingId: product_view_attribute_group_general_attribute_text_sku
+          blockType: container
+          options:
+              vars:
+                  product: '=data["product"]'
+                  visible: '=data["hack_oro_yotpo"].isProductPageRatingsWidgetEnabled()'

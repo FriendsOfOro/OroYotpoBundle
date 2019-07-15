@@ -17,6 +17,7 @@ use Symfony\Component\Config\Definition\ConfigurationInterface;
 class Configuration implements ConfigurationInterface
 {
     const REVIEW_WIDGET_ENABLED = 'review_widget_enabled'; // Enable/disable JS Reviews Widget
+    const PDP_RATINGS_WIDGET_ENABLED = 'pdp_ratings_widget_enabled'; // Enabled/disable JS Star Ratings Widget on PDP
     const CONVERSION_TRACKING_ENABLED = 'conversion_tracking_enabled'; // Enable/disable JS Conversion Tracking
     const JS_APP_KEY = 'js_app_key'; // Public app key for JS widgets
 
@@ -34,6 +35,7 @@ class Configuration implements ConfigurationInterface
             $rootNode,
             [
                 self::REVIEW_WIDGET_ENABLED              => ['type' => 'boolean', 'value' => false],
+                self::PDP_RATINGS_WIDGET_ENABLED         => ['type' => 'boolean', 'value' => false],
                 self::CONVERSION_TRACKING_ENABLED        => ['type' => 'boolean', 'value' => false],
                 self::JS_APP_KEY                         => ['type' => 'scalar', 'value' => null],
             ]

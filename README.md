@@ -29,9 +29,9 @@ Installation and Usage
 
 Roadmap / Remaining Tasks
 -------------------
-- [ ] Include correct price with Reviews Widget (eg RRP), may require configuration option?
+- [ ] Include correct price with Reviews Widget (eg RRP)
 - [ ] Implement Batch Job to push Completed/Shipped Orders into Yotpo (required for [Yotpo Automatic Review Requests](https://support.yotpo.com/en/article/map-mail-after-purchase))  
-- [ ] Implement [Yotpo Star Ratings](https://support.yotpo.com/en/article/generic-other-platforms-installing-the-yotpo-star-rating) on Product Listing Pages
+- [x] Implement [Yotpo Star Ratings](https://support.yotpo.com/en/article/generic-other-platforms-installing-the-yotpo-star-rating) on Product Listing Pages (Completed)
 - [ ] Add support for [Yotpo Reviews Carousel](https://support.yotpo.com/en/article/reviews-carousel)
 
 Licence

@@ -14,6 +14,12 @@ system_configuration:
             priority: 30
             options:
                 label: 'hack_oro.yotpo.review_widget_enabled.label'
+        hack_oro_yotpo.pdp_ratings_widget_enabled:
+            data_type: boolean
+            type: Oro\Bundle\ConfigBundle\Form\Type\ConfigCheckbox
+            priority: 30
+            options:
+                label: 'hack_oro.yotpo.pdp_ratings_widget_enabled.label'
         hack_oro_yotpo.conversion_tracking_enabled:
             data_type: boolean
             type: Oro\Bundle\ConfigBundle\Form\Type\ConfigCheckbox
@@ -37,6 +43,7 @@ system_configuration:
                                     yotpo:
                                         children:
                                             - hack_oro_yotpo.review_widget_enabled
+                                            - hack_oro_yotpo.pdp_ratings_widget_enabled
                                             - hack_oro_yotpo.conversion_tracking_enabled
                                             - hack_oro_yotpo.js_app_key
 
@@ -50,5 +57,6 @@ system_configuration:
                                     yotpo:
                                         children:
                                             - hack_oro_yotpo.review_widget_enabled
+                                            - hack_oro_yotpo.pdp_ratings_widget_enabled
                                             - hack_oro_yotpo.conversion_tracking_enabled
                                             - hack_oro_yotpo.js_app_key

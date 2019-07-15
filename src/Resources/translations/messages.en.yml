@@ -6,6 +6,8 @@ hack_oro:
             label: Yotpo Configuration
         review_widget_enabled:
             label: Enable Reviews Widget
+        pdp_ratings_widget_enabled:
+            label: Enable Product Page Star Ratings Widget
         conversion_tracking_enabled:
             label: Enable Conversion Tracking
         js_app_key:
@@ -13,3 +15,5 @@ hack_oro:
             help: >
                 Obtain the App Key Replace from the Yotpo Admin
                 or the API user creation response.
+        frontend:
+            label: Reviews
