@@ -1,0 +1,21 @@
+{% block _yotpo_reviews_widget %}
+    <h2>Yotpo Reviews</h2>
+    {% import 'OroProductBundle::image_macros.html.twig' as Image %}
+    <script type="text/javascript">
+        (function e(){var e=document.createElement("script");
+        e.type="text/javascript",e.async=true,e.src="//staticw2.yotpo.com/{{ app_key }}/widget.js";
+        var t=document.getElementsByTagName("script")[0];
+        t.parentNode.insertBefore(e,t)})();
+    </script>
+
+    {% set productImage = collect_product_images_by_types(product, ['main', 'additional'])|first %}
+
+    <div class="yotpo yotpo-main-widget"
+         data-product-id="{{ product.sku }}"
+         data-name="{{ product.denormalizedDefaultName }}"
+         data-url="{{ app.request.uri }}"
+         data-image-url="{{ productImage ? Image.url(productImage.image, 'product_original') : ""}}"
+        style="padding: 20px"
+    >
+    </div>
+{% endblock %}

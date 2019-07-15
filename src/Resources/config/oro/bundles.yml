@@ -1,0 +1,2 @@
+bundles:
+  - { name: HackOro\YotpoBundle\HackOroYotpoBundle, priority: 1000 }

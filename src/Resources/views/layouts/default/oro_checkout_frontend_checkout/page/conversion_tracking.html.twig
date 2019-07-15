@@ -1,0 +1,19 @@
+{% block _conversion_tracking_widget %}
+    {% set order_id = order.id %}
+    {% set order_amount = order.total %}
+    {% set order_currency = order.currency %}
+    <script type="text/javascript">
+        (function e(){var e=document.createElement("script");
+        e.type="text/javascript",e.async=true,e.src="//staticw2.yotpo.com/{{app_key}}/widget.js";
+        var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})();
+    </script>
+    <script>yotpoTrackConversionData = {
+        orderId: "{{order_id}}",
+        orderAmount: "{{order_amount}}",
+        orderCurrency: "{{order_currency}}"
+    }
+    </script>
+    <noscript>
+        <img src="//api.yotpo.com/conversion_tracking.gif?app_key={{app_key}}&order_id={{order_id}}&order_amount={{order_amount}}&order_currency={{order_currency}}" width="1" height="1">
+    </noscript>
+{% endblock %}

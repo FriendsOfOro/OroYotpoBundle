@@ -1,0 +1,15 @@
+hack_oro:
+    label: 'Friends of Oro'
+    yotpo:
+        label: Yotpo Reviews
+        configuration:
+            label: Yotpo Configuration
+        review_widget_enabled:
+            label: Enable Reviews Widget
+        conversion_tracking_enabled:
+            label: Enable Conversion Tracking
+        js_app_key:
+            label: Javascript App Key
+            help: >
+                Obtain the App Key Replace from the Yotpo Admin
+                or the API user creation response.

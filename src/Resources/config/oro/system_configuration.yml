@@ -1,0 +1,54 @@
+system_configuration:
+    groups:
+        hack_oro:
+            title: 'hack_oro.label'
+        hack_oro_yotpo:
+            icon: 'fa-comments'
+            title: 'hack_oro.yotpo.label'
+        yotpo:
+            title: 'hack_oro.yotpo.configuration.label'
+    fields:
+        hack_oro_yotpo.review_widget_enabled:
+            data_type: boolean
+            type: Oro\Bundle\ConfigBundle\Form\Type\ConfigCheckbox
+            priority: 30
+            options:
+                label: 'hack_oro.yotpo.review_widget_enabled.label'
+        hack_oro_yotpo.conversion_tracking_enabled:
+            data_type: boolean
+            type: Oro\Bundle\ConfigBundle\Form\Type\ConfigCheckbox
+            priority: 30
+            options:
+                label: 'hack_oro.yotpo.conversion_tracking_enabled.label'
+        hack_oro_yotpo.js_app_key:
+            data_type: string
+            type: Symfony\Component\Form\Extension\Core\Type\TextType
+            options:
+                label: 'hack_oro.yotpo.js_app_key.label'
+                tooltip: 'hack_oro.yotpo.js_app_key.help'
+    tree:
+        system_configuration:
+            commerce:
+                children:
+                    hack_oro:
+                        children:
+                            hack_oro_yotpo:
+                                children:
+                                    yotpo:
+                                        children:
+                                            - hack_oro_yotpo.review_widget_enabled
+                                            - hack_oro_yotpo.conversion_tracking_enabled
+                                            - hack_oro_yotpo.js_app_key
+
+        website_configuration:
+            commerce:
+                children:
+                    hack_oro:
+                        children:
+                            hack_oro_yotpo:
+                                children:
+                                    yotpo:
+                                        children:
+                                            - hack_oro_yotpo.review_widget_enabled
+                                            - hack_oro_yotpo.conversion_tracking_enabled
+                                            - hack_oro_yotpo.js_app_key

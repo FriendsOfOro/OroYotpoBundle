@@ -1,0 +1,13 @@
+layout:
+  actions:
+    - '@setBlockTheme':
+        themes: layout.html.twig
+    - '@add':
+        id: yotpo_reviews
+        parentId: product_view_content_container
+        blockType: container
+        options:
+            vars:
+                product: '=data["product"]'
+                visible: '=data["hack_oro_yotpo"].isReviewWidgetEnabled()'
+                app_key: '=data["hack_oro_yotpo"].getAppKey()'

@@ -1,0 +1,16 @@
+layout:
+    actions:
+        - '@setBlockTheme':
+            themes: 'conversion_tracking.html.twig'
+
+        - '@add':
+            id: conversion_tracking
+            parentId: page_content
+            blockType: block
+            options:
+                vars:
+                    order: '=data["workflowItem"].getData().get("order")'
+                    visible: '=data["hack_oro_yotpo"].isConversionTrackingEnabled()'
+                    app_key: '=data["hack_oro_yotpo"].getAppKey()'
+
+    conditions: 'context["workflowStepName"]=="order_created"'

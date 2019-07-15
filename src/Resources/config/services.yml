@@ -1,0 +1,8 @@
+services:
+    # Layout Data Provider
+    hack_oro_yotpo.layout.data_provider.yotpo:
+        class: HackOro\YotpoBundle\Layout\DataProvider\YotpoDataProvider
+        arguments:
+            - '@oro_config.manager'
+        tags:
+            - { name: layout.data_provider, alias: hack_oro_yotpo }
